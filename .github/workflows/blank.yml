@@ -1,0 +1,18 @@
+name: Deployment status bug
+on:
+  push:
+jobs:
+ deploy-dev:
+   name: Deploy dev
+   environment: bug-dev
+   runs-on: ubuntu-latest
+   steps:
+     - name: Deploy to dev
+       run: echo "deploying to dev..."
+ deploy-qa:
+   name: Deploy qa
+   environment: bug-qa
+   runs-on: ubuntu-latest
+   steps:
+     - name: Deploy to qa
+       run: echo "deploying to qa..."
